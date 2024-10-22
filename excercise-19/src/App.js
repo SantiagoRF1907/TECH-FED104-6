@@ -1,4 +1,9 @@
 import React from "react";
+import {
+  ProductContainer,
+  ProductName,
+  ProductPrice,
+} from "./StyledComponents"; // Importing styled components
 
 function App() {
   const products = [
@@ -19,23 +24,14 @@ function App() {
     },
   ];
 
-  const ProductContainer = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "10px",
-  };
-
   return (
     <div>
       {products.map((product, index) => (
-        <div key={index}>
-          <div style={{ fontWeight: "bold", fontSize: "20px" }}>
-            {product.name}
-          </div>
+        <ProductContainer key={index}>
+          <ProductName>{product.name}</ProductName>
           <div>{product.description}</div>
-          <div style={{ color: "red" }}>{product.price}</div>
-        </div>
+          <ProductPrice>{product.price}</ProductPrice>
+        </ProductContainer>
       ))}
     </div>
   );
