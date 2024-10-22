@@ -19,6 +19,13 @@ function App() {
     },
   ];
 
+  const ProductContainer = {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "10px",
+  };
+
   return (
     <div>
       {products.map((product, index) => (
